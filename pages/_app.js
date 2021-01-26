@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Head from "next/head";
 import NavBar from "../components/layout/NavBar";
 import { CssBaseline } from "@material-ui/core";
-import Slider from "../components/layout/bottom/Slider";
+import Footer from "../components/layout/bottom/Footer";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
       <CssBaseline />
       <NavBar />
       <Component {...pageProps} />
-      <Slider />;
+      <Footer />;
     </>
   );
 }

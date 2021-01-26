@@ -16,11 +16,9 @@ import PropTypes from "prop-types";
 //Load CSS
 import useStyles from "../../styles/materialUI/useStyles";
 
-export default function PortfolioSection(props) {
+export default function PortfolioSection() {
   //Assign CSS
   const classes = useStyles(),
-    //animation on first page load
-    { animation } = props,
     //STATES
     //click on picture
     [isClicked, setisClicked] = useState(false),
@@ -51,7 +49,7 @@ export default function PortfolioSection(props) {
       )}
       <Container>
         <Grid container className={classes.portfolioGrid} spacing={3}>
-          <Zoom in={animation} timeout={400}>
+          <Zoom in={true} timeout={400}>
             <Grid item style={{ textAlign: "center" }} xs={12}>
               <Typography className={classes.portfolioHeading} variant="h1">
                 GALLERY
@@ -61,7 +59,7 @@ export default function PortfolioSection(props) {
               </Typography>
             </Grid>
           </Zoom>
-          <Zoom in={animation} timeout={400}>
+          <Zoom in={true} timeout={400}>
             <Grid item sm={12} md={4}>
               <Paper elevation={3} className={classes.portfolioPaper}>
                 <div className={classes.portfolioWrapper}>
@@ -91,7 +89,7 @@ export default function PortfolioSection(props) {
               </Paper>
             </Grid>
           </Zoom>
-          <Zoom in={animation} timeout={400}>
+          <Zoom in={true} timeout={400}>
             <Grid item sm={12} md={4}>
               <Paper elevation={3} className={classes.portfolioPaper}>
                 <div className={classes.portfolioWrapper}>
@@ -121,7 +119,7 @@ export default function PortfolioSection(props) {
               </Paper>
             </Grid>
           </Zoom>
-          <Zoom in={animation} timeout={400}>
+          <Zoom in={true} timeout={400}>
             <Grid item sm={12} md={4}>
               <Paper className={classes.portfolioPaper} elevation={3}>
                 <div className={classes.portfolioWrapper}>
@@ -156,9 +154,6 @@ export default function PortfolioSection(props) {
     </Card>
   );
 }
-PortfolioSection.propTypes = {
-  animation: PropTypes.bool.isRequired,
-};
 
 //Image Dialog
 const ImageDialog = (props) => {

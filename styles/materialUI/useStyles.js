@@ -259,6 +259,14 @@ const useStyles = makeStyles((theme) => ({
   valuesGridItems: {
     paddingRight: "25px",
   },
+
+  //BOTTOM SECTION
+  //slider section css
+
+  bottomSliderCard: {
+    position: "relative",
+    backgroundColor: "#FCFCFC",
+  },
 }));
 
 export default useStyles;
