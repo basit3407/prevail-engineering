@@ -28,13 +28,12 @@ const items = [
   { timer: 60, component: "Chilled Water Piping" },
 ];
 
-const SliderSection = (props) => {
+const SliderSection = () => {
   //Assign css
   const classes = useStyles(),
     //using media quiries
     theme = useTheme(),
-    matches = useMediaQuery(theme.breakpoints.down("sm")),
-    { animation } = props;
+    matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <>
@@ -46,7 +45,7 @@ const SliderSection = (props) => {
           alignContent="center"
           justify="center"
         >
-          <Zoom in={animation} mountOnEnter timeout={400}>
+          <Zoom in={true} mountOnEnter timeout={400}>
             <Grid item xs={12} className={classes.grid}>
               <Typography
                 className={classes.sliderTypography}
@@ -57,7 +56,7 @@ const SliderSection = (props) => {
               </Typography>
             </Grid>
           </Zoom>
-          <Zoom in={animation} mountOnEnter timeout={400}>
+          <Zoom in={true} mountOnEnter timeout={400}>
             <Grid item xs={12} className={classes.grid}>
               {items.map((item, index) => {
                 return (
@@ -70,7 +69,7 @@ const SliderSection = (props) => {
               })}
             </Grid>
           </Zoom>
-          <Zoom mountOnEnter in={animation} timeout={400}>
+          <Zoom mountOnEnter in={true} timeout={400}>
             <Grid item xs={12}>
               <Typography
                 noWrap={true}
@@ -85,7 +84,7 @@ const SliderSection = (props) => {
           </Zoom>
           <Grid item xs={12} container justify="center">
             <Box py="30px">
-              <Zoom mountOnEnter in={animation} timeout={400}>
+              <Zoom mountOnEnter in={true} timeout={400}>
                 <Button
                   name="button"
                   href="/services"

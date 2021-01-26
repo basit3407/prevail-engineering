@@ -9,16 +9,12 @@ import {
   useTheme,
   Zoom,
 } from "@material-ui/core";
-//Load propTypes
-import PropTypes from "prop-types";
 //Load css
 import useStyles from "../../styles/materialUI/useStyles";
 
-export default function AboutSection(props) {
-  //For loading animation at page load
-  const { animation } = props,
-    //Asign css
-    classes = useStyles(),
+export default function AboutSection() {
+  //Asign css
+  const classes = useStyles(),
     //using media queiries
     theme = useTheme(),
     matches = useMediaQuery(theme.breakpoints.down("sm"));
@@ -29,12 +25,12 @@ export default function AboutSection(props) {
         <Box pt={matches ? "70px" : "150px"} pl={matches ? 0 : "30px"}>
           <Grid container>
             <Grid item sm={12} md={6}>
-              <Zoom in={animation} timeout={400}>
+              <Zoom in={true} timeout={400}>
                 <Typography variant="h2" className={classes.aboutHeading}>
                   ABOUT US
                 </Typography>
               </Zoom>
-              <Zoom in={animation} timeout={400}>
+              <Zoom in={true} timeout={400}>
                 <Typography variant="body1" className={classes.aboutParagraph}>
                   We are a future oriented, dynamic and fast growing contracting
                   company with a strong focus on delivering excellence in
@@ -45,7 +41,7 @@ export default function AboutSection(props) {
                   Plumbing solutions to virtually all sectors.
                 </Typography>
               </Zoom>
-              <Zoom in={animation} timeout={400}>
+              <Zoom in={true} timeout={400}>
                 <Typography variant="body1" className={classes.aboutParagraph}>
                   <strong>PREVAIL ENGINEERING</strong> is an independent
                   business entity, serving a diversified client base, ranging
@@ -56,7 +52,7 @@ export default function AboutSection(props) {
               </Zoom>
             </Grid>
             <Grid item container justify="center" sm={12} md={6}>
-              <Zoom in={animation} timeout={400}>
+              <Zoom in={true} timeout={400}>
                 <img
                   className={classes.aboutImage}
                   src="images/aboutside.jpg"
@@ -70,7 +66,3 @@ export default function AboutSection(props) {
     </Card>
   );
 }
-
-AboutSection.propTypes = {
-  animation: PropTypes.bool.isRequired,
-};

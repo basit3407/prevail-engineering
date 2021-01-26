@@ -1,5 +1,3 @@
-//Load propTypes
-import PropTypes from "prop-types";
 //Load MaterialUI Components
 import { Card, Container, Grid, Zoom, Typography } from "@material-ui/core";
 //Load css
@@ -9,16 +7,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlask } from "@fortawesome/free-solid-svg-icons";
 import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
 
-export default function Values(props) {
-  // For Loading animation on page load
-  const { animation } = props,
-    // Assign css
-    classes = useStyles();
+export default function Values() {
+  // Assign css
+  const classes = useStyles();
   return (
     <Card className={classes.valuesCard}>
       <Container>
         <Grid container className={classes.portfolioGrid} spacing={7}>
-          <Zoom in={animation} timeout={400}>
+          <Zoom in={true} timeout={400}>
             <Grid item style={{ textAlign: "center" }} xs={12}>
               <Typography className={classes.portfolioHeading} variant="h1">
                 VALUE & SERVICES
@@ -28,7 +24,7 @@ export default function Values(props) {
               </Typography>
             </Grid>
           </Zoom>
-          <Zoom in={animation} timeout={400}>
+          <Zoom in={true} timeout={400}>
             <Grid item container xs={12} md={4}>
               <Grid item xs={4} style={{ paddingRight: "25px" }}>
                 <div className={classes.valuesIconDiv}>
@@ -51,7 +47,7 @@ export default function Values(props) {
               </Grid>
             </Grid>
           </Zoom>
-          <Zoom in={animation} timeout={400}>
+          <Zoom in={true} timeout={400}>
             <Grid item container xs={12} md={4}>
               <Grid item xs={4} style={{ paddingRight: "25px" }}>
                 <div className={classes.valuesIconDiv}>
@@ -73,7 +69,7 @@ export default function Values(props) {
               </Grid>
             </Grid>
           </Zoom>
-          <Zoom in={animation} timeout={400}>
+          <Zoom in={true} timeout={400}>
             <Grid item container xs={12} md={4}>
               <Grid item xs={4} style={{ paddingRight: "25px" }}>
                 <div className={classes.valuesIconDiv}>
@@ -101,7 +97,3 @@ export default function Values(props) {
     </Card>
   );
 }
-
-Values.propTypes = {
-  animation: PropTypes.bool.isRequired,
-};

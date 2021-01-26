@@ -1,6 +1,5 @@
 import { Card, Grid, Slide } from "@material-ui/core";
-import PropTypes from "prop-types";
-import useStyles from "../../styles/materialUI/useStyles";
+import useStyles from "../../../styles/materialUI/useStyles";
 
 const imageDesc1 = [
   { number: 1, alt: "Ocean" },
@@ -14,8 +13,7 @@ const imageDesc2 = [
 ];
 const imageDesc3 = [{ number: 7, alt: "Ghambat" }];
 
-export default function Bottom(props) {
-  const { animation } = props;
+export default function Slider() {
   const classes = useStyles();
 
   return (
@@ -25,7 +23,7 @@ export default function Bottom(props) {
           {imageDesc1.map((image, index) => {
             const { number, alt } = image;
             return (
-              <Grid key={index} xs={12} md={4}>
+              <Grid key={index} xs={12} md={4} item>
                 <img src={`images/logo-${number}.jpg`} alt={alt}></img>
               </Grid>
             );
@@ -36,7 +34,7 @@ export default function Bottom(props) {
         {imageDesc2.map((image, index) => {
           const { number, alt } = image;
           return (
-            <Grid key={index} xs={12} md={4}>
+            <Grid key={index} xs={12} md={4} item>
               <img src={`images/logo-${number}.jpg`} alt={alt}></img>
             </Grid>
           );
@@ -46,7 +44,7 @@ export default function Bottom(props) {
         {imageDesc3.map((image, index) => {
           const { number, alt } = image;
           return (
-            <Grid key={index} xs={12} md={4}>
+            <Grid key={index} xs={12} md={4} item>
               <img src={`images/logo-${number}.jpg`} alt={alt}></img>
             </Grid>
           );
@@ -55,7 +53,3 @@ export default function Bottom(props) {
     </Card>
   );
 }
-
-Bottom.propTypes = {
-  animation: PropTypes.bool.isRequired,
-};
