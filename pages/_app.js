@@ -3,15 +3,11 @@ import PropTypes from "prop-types";
 import Head from "next/head";
 import NavBar from "../components/layout/NavBar";
 import { CssBaseline } from "@material-ui/core";
+import Bottom from "../components/layout/Bottom";
 
 function MyApp({ Component, pageProps }) {
   //For animation at page load
   const [animation, setAnimation] = useState(false);
-  const props = {
-    ...pageProps,
-    animation: animation,
-    setAnimation: setAnimation,
-  };
 
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -19,7 +15,14 @@ function MyApp({ Component, pageProps }) {
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
+    //Animate at page load
+    setAnimation(true);
   }, []);
+
+  const props = {
+    ...pageProps,
+    animation: animation,
+  };
 
   return (
     <>
@@ -29,7 +32,8 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <CssBaseline />
       <NavBar />
-      <Component {...props} />;
+      <Component {...props} />
+      <Bottom />;
     </>
   );
 }
