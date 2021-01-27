@@ -7,7 +7,7 @@ import Footer from "../components/layout/bottom/Footer";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    // Remove the server-side injected CSS.
+    // Remove the server-side injected CSS (For Material ui to work)
     const jssStyles = document.querySelector("#jss-server-side");
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);

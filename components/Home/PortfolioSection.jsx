@@ -50,7 +50,7 @@ export default function PortfolioSection() {
       <Container>
         <Grid container className={classes.portfolioGrid} spacing={3}>
           <Zoom in={true} timeout={400}>
-            <Grid className={classes.globalGridItem} xs={12}>
+            <Grid className={classes.globalGridItem} item xs={12}>
               <Typography className={classes.portfolioHeading} variant="h1">
                 GALLERY
               </Typography>

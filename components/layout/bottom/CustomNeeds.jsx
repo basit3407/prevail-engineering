@@ -15,34 +15,21 @@ export default function CustomNeeds() {
       <Container>
         <Grid container>
           <Zoom timeout={400} in={true}>
-            <Grid
-              item
-              className={classes.globalGridItem}
-              style={{ padding: "5%" }}
-            >
+            <Grid item className={classes.customNeedsGridItem}>
               <Typography className={classes.customNeedsHeading} variant="h1">
                 CUSTOM NEEDS ?
               </Typography>
-              <Typography
-                style={{
-                  padding: "3%",
-                }}
-                variant="body1"
-              >
+              <Typography className={classes.customNeedsPara} variant="body1">
                 More than often, our clients will need personalized solutions,
                 and this is our speciality, with our expertise we are certain
                 your needs and requirements will be met.
               </Typography>
               <Button
-                style={{
-                  backgroundColor: "#fff",
-                  borderRadius: 0,
-                  padding: "1.5% 3%",
-                }}
+                className={classes.customNeedsButton}
                 size="large"
                 href="/contact"
               >
-                <Typography style={{ color: "#0062ae" }} variant="caption">
+                <Typography color="inherit" variant="caption">
                   LETS GET STARTED
                 </Typography>
               </Button>

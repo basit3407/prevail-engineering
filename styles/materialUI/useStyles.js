@@ -8,10 +8,12 @@ for (let i = 1; i < 101; i++) {
 }
 
 const useStyles = makeStyles((theme) => ({
+  //GLOBAL //
   //Grid items text align
   globalGridItem: {
     textAlign: "center",
   },
+
   //NAV BAR SECTION//
   //Toolabar css
   toolbar: {
@@ -36,11 +38,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   //HOME PAGE TOP SECTION
-
-  //Grid items css
-  grid: {
-    textAlign: "center",
-  },
 
   //card media css
   media: {
@@ -270,6 +267,64 @@ const useStyles = makeStyles((theme) => ({
   bottomSliderCard: {
     position: "relative",
     backgroundColor: "#FCFCFC",
+  },
+
+  //custom needs section css
+  customNeedsCard: {
+    backgroundColor: "#0062ae",
+    color: "#fff",
+  },
+  customNeedsHeading: {
+    color: "inherit",
+    fontSize: "26px",
+    fontWeight: 300,
+    marginBottom: "15px",
+  },
+  customNeedsGridItem: {
+    textAlign: "center",
+    padding: "5%",
+  },
+  customNeedsPara: {
+    fontSize: "15px",
+    fontWeight: 300,
+    MarginTop: "20px",
+  },
+  customNeedsButton: {
+    backgroundColor: "#fff",
+    borderRadius: 0,
+    padding: "16px 35px",
+    fontSize: "12px",
+    marginTop: "20px",
+    letterSpacing: "2px",
+    color: "#0062ae",
+  },
+
+  //info section css
+  infoCard: {
+    // position: "relative",
+  },
+  infoLink: {
+    color: "#0062ae",
+    "&:hover": {
+      color: "#0062ae",
+      textDecoration: "none",
+    },
+  },
+  gridItemRightInfo: {
+    padding: "2% 0",
+    textAlign: "right",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
+  },
+  gridItemLeftInfo: {
+    padding: "2% 0",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
+  },
+  socailLink: {
+    padding: "0 1%",
   },
 }));
 

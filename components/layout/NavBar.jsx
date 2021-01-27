@@ -13,6 +13,7 @@ import {
   useScrollTrigger,
   useMediaQuery,
   useTheme,
+  Container,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import useStyles from "../../styles/materialUI/useStyles";
@@ -44,64 +45,66 @@ export default function NavBar(props) {
       <ElevationScroll {...props}>
         <AppBar>
           <Toolbar className={classes.toolbar}>
-            <Grid container>
-              <Grid item container justify="center" xs={6}>
-                <img
-                  style={{
-                    height: matches ? "8vh" : "10vh",
-                  }}
-                  src="/images/logofinal.png"
-                  alt=""
-                />
-              </Grid>
-              <Grid
-                item
-                xs={6}
-                container
-                direction="row"
-                alignContent="center"
-                justify={matches ? "flex-end" : "center"}
-              >
-                <Hidden mdUp>
-                  <IconButton edge="end" onClick={handleMenu}>
-                    <MenuIcon />
-                  </IconButton>
+            <Container>
+              <Grid container>
+                <Grid item container xs={6}>
+                  <img
+                    style={{
+                      height: matches ? "8vh" : "10vh",
+                    }}
+                    src="/images/logofinal.png"
+                    alt=""
+                  />
+                </Grid>
+                <Grid
+                  item
+                  xs={6}
+                  container
+                  direction="row"
+                  alignContent="center"
+                  justify={matches ? "flex-end" : "center"}
+                >
+                  <Hidden mdUp>
+                    <IconButton edge="end" onClick={handleMenu}>
+                      <MenuIcon />
+                    </IconButton>
 
-                  <Menu
-                    anchorEl={anchorEl}
-                    anchorOrigin={{
-                      vertical: "top",
-                      horizontal: "right",
-                    }}
-                    keepMounted
-                    transformOrigin={{
-                      vertical: "top",
-                      horizontal: "right",
-                    }}
-                    open={open}
-                    onClose={handleClose}
-                  >
+                    <Menu
+                      anchorEl={anchorEl}
+                      anchorOrigin={{
+                        vertical: "top",
+                        horizontal: "right",
+                      }}
+                      keepMounted
+                      transformOrigin={{
+                        vertical: "top",
+                        horizontal: "right",
+                      }}
+                      open={open}
+                      onClose={handleClose}
+                    >
+                      {pages.map((page, index) => {
+                        const { title, href } = page;
+                        return (
+                          <MenuItem key={index}>
+                            <LinkComponent title={title} href={href} />
+                          </MenuItem>
+                        );
+                      })}
+                    </Menu>
+                  </Hidden>
+
+                  <Hidden smDown>
                     {pages.map((page, index) => {
                       const { title, href } = page;
                       return (
-                        <MenuItem key={index}>
-                          <LinkComponent title={title} href={href} />
-                        </MenuItem>
+                        <LinkComponent key={index} title={title} href={href} />
                       );
                     })}
-                  </Menu>
-                </Hidden>
-
-                <Hidden smDown>
-                  {pages.map((page, index) => {
-                    const { title, href } = page;
-                    return (
-                      <LinkComponent key={index} title={title} href={href} />
-                    );
-                  })}
-                </Hidden>
+                  </Hidden>
+                </Grid>
               </Grid>
-            </Grid>
+            </Container>
           </Toolbar>
         </AppBar>
       </ElevationScroll>

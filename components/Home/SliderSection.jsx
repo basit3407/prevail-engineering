@@ -44,7 +44,7 @@ const SliderSection = () => {
           justify="center"
         >
           <Zoom in={true} mountOnEnter timeout={400}>
-            <Grid item xs={12} className={classes.grid}>
+            <Grid item xs={12} className={classes.globalGridItem}>
               <Typography
                 className={classes.sliderTypography}
                 noWrap={true}
@@ -55,7 +55,7 @@ const SliderSection = () => {
             </Grid>
           </Zoom>
           <Zoom in={true} mountOnEnter timeout={400}>
-            <Grid item xs={12} className={classes.grid}>
+            <Grid item xs={12} className={classes.globalGridItem}>
               {items.map((item, index) => {
                 return (
                   <Animation

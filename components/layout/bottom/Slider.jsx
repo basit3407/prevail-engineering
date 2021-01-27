@@ -46,7 +46,7 @@ export default function Slider() {
           <Zoom in={true} timeout={400}>
             <Grid container justify="center" item xs={12}>
               {/* Carousel on inner 3 grid items */}
-              <Carousel animation="slide">
+              <Carousel timeout={400} animation="slide">
                 <Grid container item spacing={matches ? 0 : 7}>
                   {imageDesc1.map((image, index) => {
                     const { number, alt } = image;
