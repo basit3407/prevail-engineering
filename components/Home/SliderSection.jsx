@@ -1,5 +1,3 @@
-//Load propTypes
-import PropTypes from "prop-types";
 //Load css
 import useStyles from "../../styles/materialUI/useStyles";
 //Load headings animation
@@ -107,7 +105,3 @@ const SliderSection = () => {
 };
 
 export default SliderSection;
-
-SliderSection.propTypes = {
-  animation: PropTypes.bool.isRequired,
-};

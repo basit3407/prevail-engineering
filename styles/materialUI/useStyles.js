@@ -8,6 +8,10 @@ for (let i = 1; i < 101; i++) {
 }
 
 const useStyles = makeStyles((theme) => ({
+  //Grid items text align
+  globalGridItem: {
+    textAlign: "center",
+  },
   //NAV BAR SECTION//
   //Toolabar css
   toolbar: {

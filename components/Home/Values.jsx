@@ -15,7 +15,7 @@ export default function Values() {
       <Container>
         <Grid container className={classes.portfolioGrid} spacing={7}>
           <Zoom in={true} timeout={400}>
-            <Grid item style={{ textAlign: "center" }} xs={12}>
+            <Grid item className={classes.globalGridItem} xs={12}>
               <Typography className={classes.portfolioHeading} variant="h1">
                 VALUE & SERVICES
               </Typography>
@@ -25,8 +25,8 @@ export default function Values() {
             </Grid>
           </Zoom>
           <Zoom in={true} timeout={400}>
-            <Grid item container xs={12} md={4}>
-              <Grid item xs={4} style={{ paddingRight: "25px" }}>
+            <Grid container item xs={12} md={4}>
+              <Grid item xs={4} className={classes.valuesGridItems}>
                 <div className={classes.valuesIconDiv}>
                   <FontAwesomeIcon
                     className={classes.valuesIcon}
@@ -49,7 +49,7 @@ export default function Values() {
           </Zoom>
           <Zoom in={true} timeout={400}>
             <Grid item container xs={12} md={4}>
-              <Grid item xs={4} style={{ paddingRight: "25px" }}>
+              <Grid item xs={4} className={classes.valuesGridItems}>
                 <div className={classes.valuesIconDiv}>
                   <FontAwesomeIcon
                     className={classes.valuesIcon}
@@ -71,7 +71,7 @@ export default function Values() {
           </Zoom>
           <Zoom in={true} timeout={400}>
             <Grid item container xs={12} md={4}>
-              <Grid item xs={4} style={{ paddingRight: "25px" }}>
+              <Grid item xs={4} className={classes.valuesGridItems}>
                 <div className={classes.valuesIconDiv}>
                   <FontAwesomeIcon
                     className={classes.valuesIcon}
