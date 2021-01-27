@@ -297,14 +297,15 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "20px",
     letterSpacing: "2px",
     color: "#0062ae",
+    "&:hover": {
+      backgroundColor: "#fff",
+    },
   },
 
   //info section css
-  infoCard: {
-    // position: "relative",
-  },
   infoLink: {
     color: "#0062ae",
+
     "&:hover": {
       color: "#0062ae",
       textDecoration: "none",
@@ -325,6 +326,55 @@ const useStyles = makeStyles((theme) => ({
   },
   socailLink: {
     padding: "0 1%",
+  },
+
+  //ABOUT PAGE //
+  //Top Section
+
+  gridItemAboutTop: {
+    textAlign: "center",
+    padding: "5% 0",
+  },
+  headingAboutTop: {
+    fontSize: "42px",
+    fontWeight: "bold",
+    color: "#fff",
+  },
+
+  //Middle section
+  imageAboutMiddle: {
+    height: "100%",
+    width: "100%",
+    position: "relative",
+  },
+
+  gridItemMiddleTop: {
+    padding: "5% 0",
+    position: "relative",
+  },
+  headingAboutMiddle: {
+    fontSize: "24px",
+    fontWeight: 600,
+    marginBottom: "18px",
+    padding: "0 5%",
+  },
+  paragraphAboutMiddle: {
+    padding: "0 5% 1% 5%",
+  },
+
+  //Bottom section
+  gridItemAboutBottom: {
+    backgroundColor: "#0062ae",
+  },
+  headingAboutBottom: {
+    padding: "15% 10% 1%",
+    color: "#fff",
+    fontSize: "24px",
+    fontWeight: 600,
+  },
+  paragraphAboutBottom: {
+    color: "#fff",
+    padding: "0 10% 10%",
   },
 }));
 

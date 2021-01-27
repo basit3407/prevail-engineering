@@ -7,7 +7,7 @@ const date = new Date().getFullYear();
 export default function Info() {
   const classes = useStyles();
   return (
-    <Card className={classes.infoCard}>
+    <Card>
       <Container>
         <Grid container>
           <Grid item xs={12} md={6} className={classes.gridItemLeftInfo}>
