@@ -1,9 +1,11 @@
 import Top from "../components/Services/Top";
+import WhatWeOffer from "../components/Services/whatWeOffer";
 
 export default function Services() {
   return (
     <>
       <Top />
+      <WhatWeOffer />
     </>
   );
 }

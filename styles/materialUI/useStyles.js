@@ -404,6 +404,32 @@ const useStyles = makeStyles((theme) => ({
   iconServicesTop: {
     paddingTop: "1%",
   },
+
+  //What we offer
+  gridItemWWOServices: {
+    padding: "5%",
+  },
+  headingWWOServices: {
+    fontSize: "1.5rem",
+    fontWeight: 600,
+    paddingBottom: "3%",
+  },
+  paraWWOServices: {
+    paddingBottom: "3%",
+  },
+  listHeadingWWPServices: {
+    fontSize: "1.2rem",
+    paddingTop: "5%",
+  },
+  listWWOServices: {
+    listStyle: "none",
+    padding: 0,
+  },
+  imageWWOServices: {
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
 }));
 
 export default useStyles;
