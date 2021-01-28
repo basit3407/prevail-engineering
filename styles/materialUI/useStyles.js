@@ -485,6 +485,15 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
     fontSize: "0.875rem",
   },
+
+  //value
+  H4ValueServices: {
+    fontWeight: 400,
+    fontSize: "1.125rem",
+    color: "#333",
+    lineHeight: 1.1,
+    padding: "3% 0 2%",
+  },
 }));
 
 export default useStyles;
