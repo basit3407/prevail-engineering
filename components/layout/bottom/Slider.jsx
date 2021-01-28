@@ -34,12 +34,12 @@ export default function Slider() {
           {/* Zoom on out 2 grid items */}
           <Zoom in={true} timeout={400}>
             <Grid item xs={12} className={classes.globalGridItem}>
-              <Typography
-                className={classes.aboutHeading}
-                style={{ padding: "5%" }}
-                variant="h1"
-              >
+              <Typography className={classes.bottomSliderHeading} variant="h1">
                 OUR HAPPY CLIENTS
+              </Typography>
+              <Typography className={classes.bottomSliderPara} variant="body1">
+                Pakistan&apos;s Famous Brands and Companies are our satisfied
+                clients
               </Typography>
             </Grid>
           </Zoom>

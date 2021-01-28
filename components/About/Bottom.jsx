@@ -6,10 +6,10 @@ export default function Bottom() {
   return (
     <Card>
       <Grid container>
-        <Grid item xs={12} md={4} className={classes.gridItemAboutBottom}>
+        <Grid item xs={12} md={4} className={classes.gridItemAboutBottom1}>
           <Container>
             <Typography className={classes.headingAboutBottom} variant="h2">
-              OUR MISSION
+              Our Mission
             </Typography>
             <Typography
               className={classes.paragraphAboutBottom}
@@ -26,8 +26,37 @@ export default function Bottom() {
             </Typography>
           </Container>
         </Grid>
-        <Grid item></Grid>
-        <Grid item></Grid>
+        <Grid item xs={12} md={4} className={classes.gridItemAboutBottom2}>
+          <Container>
+            <Typography className={classes.headingAboutBottom} variant="h2">
+              Our Vision
+            </Typography>
+            <Typography
+              className={classes.paragraphAboutBottom}
+              variant="body1"
+            >
+              With the advent of modern day technology, the Internet has become
+              the center of all running businesses, with everything just a click
+              away. Our design methodology starts with the typical Requirement
+              Analysis phase and proceeds with the incorporation of traditional
+              and latest design trends. We design the most value efficient
+              solutions that combine form, function and performance- We aim to
+              provide engineering systems that ensure lifetime savings and
+              comfort for the concerned clients and users.
+            </Typography>
+          </Container>
+        </Grid>
+        <Grid item xs={12} md={4} className={classes.gridItemAboutBottom3}>
+          <Typography className={classes.headingAboutBottom} variant="h2">
+            Our Teams
+          </Typography>
+          <Typography className={classes.paragraphAboutBottom} variant="body1">
+            Our Team Engineers, technician and draftsmen in our team have worked
+            with he leading contractors and Consultants of Pakistan, which gives
+            us the diverse and extensive experience required in handing and
+            managing client requirements to a high degree of success.
+          </Typography>
+        </Grid>
       </Grid>
     </Card>
   );

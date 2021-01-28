@@ -267,6 +267,15 @@ const useStyles = makeStyles((theme) => ({
   bottomSliderCard: {
     position: "relative",
     backgroundColor: "#FCFCFC",
+    padding: "5% 5% 2%",
+  },
+
+  bottomSliderHeading: {
+    fontWeight: 600,
+    fontSize: "1.5rem",
+  },
+  bottomSliderPara: {
+    padding: "2% 5% 5%",
   },
 
   //custom needs section css
@@ -363,8 +372,14 @@ const useStyles = makeStyles((theme) => ({
   },
 
   //Bottom section
-  gridItemAboutBottom: {
+  gridItemAboutBottom1: {
     backgroundColor: "#0062ae",
+  },
+  gridItemAboutBottom2: {
+    backgroundColor: "#007fe2",
+  },
+  gridItemAboutBottom3: {
+    backgroundColor: "#00487f",
   },
   headingAboutBottom: {
     padding: "15% 10% 1%",
