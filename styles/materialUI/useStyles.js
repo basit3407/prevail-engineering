@@ -465,9 +465,10 @@ const useStyles = makeStyles((theme) => ({
   headingCSServices: {
     fontSize: "1.5rem",
     fontWeight: 600,
-    padding: "3% 0 1%",
+    padding: "7% 0 1%",
   },
   paraCSServices: {
+    paddingBottom: "1%",
     [theme.breakpoints.down("sm")]: {
       paddingBottom: "5%",
     },
