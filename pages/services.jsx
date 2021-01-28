@@ -1,3 +1,4 @@
+import CoreSpecilizations from "../components/Services/coreSpecilizations";
 import Top from "../components/Services/Top";
 import WhatWeOffer from "../components/Services/whatWeOffer";
 
@@ -6,6 +7,7 @@ export default function Services() {
     <>
       <Top />
       <WhatWeOffer />
+      <CoreSpecilizations />
     </>
   );
 }

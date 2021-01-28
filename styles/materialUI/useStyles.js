@@ -406,6 +406,17 @@ const useStyles = makeStyles((theme) => ({
   },
 
   //What we offer
+  cardWWoServices: {
+    boxShadow: "none",
+    height: "100vh",
+    border: "none",
+    [theme.breakpoints.down("sm")]: {
+      height: "200vh",
+    },
+    [theme.breakpoints.between("sm", "md")]: {
+      height: "200vh",
+    },
+  },
   gridItemWWOServices: {
     padding: "5%",
   },
@@ -413,6 +424,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.5rem",
     fontWeight: 600,
     paddingBottom: "3%",
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "5%",
+    },
   },
   paraWWOServices: {
     paddingBottom: "3%",
@@ -424,11 +438,51 @@ const useStyles = makeStyles((theme) => ({
   listWWOServices: {
     listStyle: "none",
     padding: 0,
+    fontSize: "1rem",
   },
   imageWWOServices: {
     [theme.breakpoints.down("sm")]: {
       width: "100%",
     },
+  },
+
+  //Core specializations
+  cardCSServices: {
+    boxShadow: "none",
+  },
+  containerCSServices: {
+    backgroundColor: "#FCFCFC",
+    marginTop: "5%",
+  },
+  gridContainerCSServices: {
+    padding: "0 5%",
+  },
+  gridItemCSServices: {
+    padding: "1% 3%",
+    textAlign: "center",
+  },
+
+  headingCSServices: {
+    fontSize: "1.5rem",
+    fontWeight: 600,
+    padding: "3% 0 1%",
+  },
+  paraCSServices: {
+    [theme.breakpoints.down("sm")]: {
+      paddingBottom: "5%",
+    },
+  },
+  listHeadingCSServices: {
+    fontSize: "1.1rem",
+    paddingTop: "10%",
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "5%",
+    },
+  },
+  listCSServices: {
+    listStyle: "none",
+    padding: 0,
+    fontSize: "0.875rem",
   },
 }));
 

@@ -1,54 +1,62 @@
-import { Card, Container, Grid, Typography } from "@material-ui/core";
+import { Card, Container, Grid, Typography, Zoom } from "@material-ui/core";
 import useStyles from "../../styles/materialUI/useStyles";
 
+const listItems = [
+  "• Single or three phase Electrical Wiring",
+  "• Industrial and process automation",
+  "• Building Management System",
+  "• HVAC workee phase Electrical Wiring",
+  "• Cable laying and termination",
+  "• Plumbing works",
+  "• Fire Alarm System",
+  "• System Integration",
+  "• Generator overhauling and repairing",
+  "• CCTV",
+  "• Access Control System",
+  "• Parking Management System",
+];
 export default function WhatWeOffer() {
   const classes = useStyles();
   return (
-    <Card>
+    <Card className={classes.cardWWoServices}>
       <Container>
         <Grid container>
-          <Grid item xs={12} md={6} className={classes.gridItemWWOServices}>
-            <Typography variant="h2" className={classes.headingWWOServices}>
-              WHAT WE OFFER
-            </Typography>
-            <Typography className={classes.paraWWOServices}>
-              We offer clients a unique, collaborative approach that is tailored
-              to suit individual needs. We have a team that has successfully
-              delivered a number of projects and have a vast experience in MEP
-              Commissioning. We have a proven reputation for delivering complex
-              projects with quality workmanship, in a professional and timely
-              manner. Prevail Engineering has a qualified and experienced
-              in&apos;house design and engineering team to provide clients with
-              the design-and- build capability for all MEP components on major
-              buildings.
-            </Typography>
-            <Typography className={classes.listHeadingWWOServices}>
-              Specialized In:
-            </Typography>
-            <Typography>
+          <Zoom in={true} timeout={400}>
+            <Grid item xs={12} md={6} className={classes.gridItemWWOServices}>
+              <Typography variant="h2" className={classes.headingWWOServices}>
+                WHAT WE OFFER
+              </Typography>
+              <Typography className={classes.paraWWOServices}>
+                We offer clients a unique, collaborative approach that is
+                tailored to suit individual needs. We have a team that has
+                successfully delivered a number of projects and have a vast
+                experience in MEP Commissioning. We have a proven reputation for
+                delivering complex projects with quality workmanship, in a
+                professional and timely manner. Prevail Engineering has a
+                qualified and experienced in&apos;house design and engineering
+                team to provide clients with the design-and- build capability
+                for all MEP components on major buildings.
+              </Typography>
+              <Typography className={classes.listHeadingWWOServices}>
+                Specialized In:
+              </Typography>
+
               <ul className={classes.listWWOServices}>
-                <li>• Single or three phase Electrical Wiring</li>
-                <li>• Industrial and process automation</li>
-                <li>• Building Management System</li>
-                <li>• HVAC workee phase Electrical Wiring</li>
-                <li>• Cable laying and termination</li>
-                <li>• Plumbing works</li>
-                <li>• Fire Alarm System</li>
-                <li>• System Integration</li>
-                <li>• Generator overhauling and repairing</li>
-                <li>• CCTV</li>
-                <li>• Access Control System</li>
-                <li>• Parking Management System</li>
+                {listItems.map((item, index) => {
+                  return <li key={index}>{item}</li>;
+                })}
               </ul>
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={6} className={classes.gridItemWWOServices}>
-            <img
-              src="images/team.jpg"
-              alt=""
-              className={classes.imageWWOServices}
-            />
-          </Grid>
+            </Grid>
+          </Zoom>
+          <Zoom in={true} timeout={400}>
+            <Grid item xs={12} md={6} className={classes.gridItemWWOServices}>
+              <img
+                src="images/team.jpg"
+                alt=""
+                className={classes.imageWWOServices}
+              />
+            </Grid>
+          </Zoom>
         </Grid>
       </Container>
     </Card>
