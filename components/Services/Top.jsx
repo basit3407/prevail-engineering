@@ -11,13 +11,13 @@ export default function Top() {
         <Grid container>
           <Grid item xs={12} className={classes.gridItemAboutTop}>
             <Typography className={classes.headingAboutTop} variant="h1">
-              ABOUT COMPANY
+              SERVICES
             </Typography>
-            <Typography className={classes.iconAboutTop}>
+            <Typography className={classes.iconServicesTop}>
               <Link color="inherit" underline="none" href="/">
                 <FontAwesomeIcon color="#fff" icon={faHome} /> Home{" "}
               </Link>
-              / About
+              / Services
             </Typography>
           </Grid>
         </Grid>

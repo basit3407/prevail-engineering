@@ -349,6 +349,13 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     color: "#fff",
   },
+  iconAboutTop: {
+    paddingRight: "7%",
+    paddingTop: "1%",
+    [theme.breakpoints.down("sm")]: {
+      paddingRight: "25%",
+    },
+  },
 
   //Middle section
   imageAboutMiddle: {
@@ -390,6 +397,12 @@ const useStyles = makeStyles((theme) => ({
   paragraphAboutBottom: {
     color: "#fff",
     padding: "0 10% 10%",
+  },
+
+  //SERVICES SECTION //
+  //Top
+  iconServicesTop: {
+    paddingTop: "1%",
   },
 }));
 
