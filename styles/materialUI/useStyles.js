@@ -486,13 +486,32 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "0.875rem",
   },
 
-  //value
+  //value\
+  valuesServicesCard: {
+    boxShadow: "none",
+  },
   H4ValueServices: {
     fontWeight: 400,
     fontSize: "1.125rem",
     color: "#333",
     lineHeight: 1.1,
     padding: "3% 0 2%",
+  },
+
+  //Feasibility
+  gridContainerFeasibilityServices: {
+    padding: "0 5%",
+  },
+
+  cardFeasibilityServices: {
+    boxShadow: "none",
+    backgroundColor: "#FCFCFC",
+  },
+
+  headingFeasibilityServices: {
+    fontSize: "1.5rem",
+    fontWeight: 600,
+    paddingTop: "5%",
   },
 }));
 

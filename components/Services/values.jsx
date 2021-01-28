@@ -22,7 +22,7 @@ const serviceValues = values.map((value) => {
 export default function Values() {
   const classes = useStyles();
   return (
-    <Card className={classes.valuesCard}>
+    <Card className={classes.valuesServicesCard}>
       <Container>
         <Grid container className={classes.portfolioGrid} spacing={3}>
           <Zoom in={true} timeout={400}>
@@ -44,7 +44,6 @@ export default function Values() {
                     size="3x"
                     icon={value.icon}
                   />
-
                   <Typography className={classes.H4ValueServices} variant="h4">
                     {value.title}
                   </Typography>
