@@ -500,7 +500,10 @@ const useStyles = makeStyles((theme) => ({
 
   //Feasibility
   gridContainerFeasibilityServices: {
-    padding: "0 5%",
+    padding: "5%",
+  },
+  gridItemFeasibilityServices: {
+    position: "relative",
   },
 
   cardFeasibilityServices: {
@@ -511,7 +514,9 @@ const useStyles = makeStyles((theme) => ({
   headingFeasibilityServices: {
     fontSize: "1.5rem",
     fontWeight: 600,
-    paddingTop: "5%",
+  },
+  imageFeasibilityServices: {
+    width: "100%",
   },
 }));
 

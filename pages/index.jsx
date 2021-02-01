@@ -3,6 +3,7 @@ import AboutSection from "../components/Home/AboutSection";
 import PortfolioSection from "../components/Home/PortfolioSection";
 import SliderSection from "../components/Home/SliderSection";
 import Values from "../components/Home/Values";
+import Slider from "../components/layout/bottom/Slider";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <AboutSection />
       <PortfolioSection />
       <Values />
+      <Slider />
     </>
   );
 }

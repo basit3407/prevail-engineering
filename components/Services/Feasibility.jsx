@@ -1,7 +1,7 @@
 import { Card, Container, Grid, Typography } from "@material-ui/core";
 import useStyles from "../../styles/materialUI/useStyles";
 
-const listItems1 = [
+const listItems = [
   "• Requirements assessment",
   "• Preliminary investigations",
   "• Development of options and comparative analysis",
@@ -14,16 +14,15 @@ export default function Feasibility() {
     <Card className={classes.cardFeasibilityServices}>
       <Container>
         <Grid container className={classes.gridContainerFeasibilityServices}>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={4}>
             <Typography
               variant="h2"
               className={classes.headingFeasibilityServices}
-              style={{ paddingTop: "40%" }}
             >
               PRE-FEASIBILITY & FEASIBILITY STUDIES
             </Typography>
             <ul className={classes.listCSServices}>
-              {listItems1.map((item, index) => {
+              {listItems.map((item, index) => {
                 return <li key={index}>{item}</li>;
               })}
             </ul>
@@ -38,7 +37,18 @@ export default function Feasibility() {
               <li>• Computer simulations</li>
             </ul>
           </Grid>
-          <Grid item xs={12} md={6}></Grid>
+          <Grid
+            item
+            className={classes.gridItemFeasibilityServices}
+            xs={12}
+            md={8}
+          >
+            <img
+              className={classes.imageFeasibilityServices}
+              src="images/laptop-service.jpg"
+              alt=""
+            />
+          </Grid>
         </Grid>
       </Container>
     </Card>
