@@ -506,6 +506,12 @@ const useStyles = makeStyles((theme) => ({
   imageFeasibilityServices: {
     width: "100%",
   },
+
+  //GALLERY PAGE //
+  //images
+  gridContainerGallery: {
+    padding: "7%",
+  },
 }));
 
 export default useStyles;

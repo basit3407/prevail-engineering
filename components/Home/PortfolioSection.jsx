@@ -72,7 +72,6 @@ export default function PortfolioSection() {
                     <Button
                       onClick={handleClick}
                       className={classes.portfolioZoom}
-                      underline="none"
                       id="dolmen"
                     >
                       +
