@@ -361,12 +361,10 @@ const useStyles = makeStyles((theme) => ({
   imageAboutMiddle: {
     height: "100%",
     width: "100%",
-    position: "relative",
   },
 
   gridItemMiddleTop: {
     padding: "5% 0",
-    position: "relative",
   },
   headingAboutMiddle: {
     fontSize: "24px",
@@ -408,15 +406,8 @@ const useStyles = makeStyles((theme) => ({
   //What we offer
   cardWWoServices: {
     boxShadow: "none",
-    height: "100vh",
-    border: "none",
-    [theme.breakpoints.down("sm")]: {
-      height: "200vh",
-    },
-    [theme.breakpoints.between("sm", "md")]: {
-      height: "200vh",
-    },
   },
+
   gridItemWWOServices: {
     padding: "5%",
   },
@@ -424,9 +415,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.5rem",
     fontWeight: 600,
     paddingBottom: "3%",
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: "5%",
-    },
   },
   paraWWOServices: {
     paddingBottom: "3%",

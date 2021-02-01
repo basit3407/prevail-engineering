@@ -79,7 +79,7 @@ export default function CoreSpecilizations() {
           {services.map((service, index) => {
             return (
               <Zoom key={index} in={true} timeout={400}>
-                <Grid sx={12} md className={classes.gridItemCSServices} item>
+                <Grid xs={12} md className={classes.gridItemCSServices} item>
                   <FontAwesomeIcon
                     icon={service.icon}
                     spin
