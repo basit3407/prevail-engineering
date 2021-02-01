@@ -7,79 +7,96 @@ import {
   Paper,
   Zoom,
   Dialog,
+  Typography,
 } from "@material-ui/core";
 import useStyles from "../../styles/materialUI/useStyles";
 import PropTypes from "prop-types";
 
-export default function Images(props) {
-  //Assign CSS
-  const classes = useStyles(),
-    //STATES
-    //click on picture
-    [isClicked, setisClicked] = useState(false),
-    //open dialog with zoomed picture
-    [open, setOpen] = useState(false),
-    //Button element clicked
-    [id, setId] = useState(null);
+const imageArray = [];
 
-  //ACTIONS //
-  //Click on Pictures
-  const handleClick = (event) => {
-    const { id } = event.currentTarget;
-    setId(id);
-    setOpen(true);
-    setisClicked(true);
-  };
+for (let index = 1; index < 10; index++) {
+  let object = {};
+  object["number"] = index;
+  object["typography"] = null;
+  imageArray.push(object);
+}
+
+export default function Images() {
+  //Assign CSS
+  const classes = useStyles();
 
   return (
     <Card>
-      {isClicked && (
-        <ImageDialog
-          id={id}
-          setisClicked={setisClicked}
-          setOpen={setOpen}
-          open={open}
-        />
-      )}
       <Container>
         <Grid container className={classes.gridContainerGallery} spacing={3}>
-          {props.array.map((item, index) => {
-            return (
-              <Grid key={index} item xs={12} md={4}>
-                <Paper elevation={3} className={classes.portfolioPaper}>
-                  <div className={classes.portfolioWrapper}>
-                    <img
-                      src={`images/item-${item}.jpg`}
-                      alt=""
-                      className={classes.portfolioImage}
-                    />
-
-                    <div className={classes.portfolioOverlay} />
-                    <Button
-                      onClick={handleClick}
-                      className={classes.portfolioZoom}
-                      id={item}
-                    >
-                      +
-                    </Button>
-                  </div>
-                </Paper>
-              </Grid>
-            );
-          })}
+          <ArrayMap array={imageArray} />
         </Grid>
       </Container>
     </Card>
   );
 }
 
-Images.propTypes = {
+export const ArrayMap = (props) => {
+  const classes = useStyles(),
+    { array } = props,
+    [id, setId] = useState(null),
+    [isClicked, setisClicked] = useState(false);
+
+  const handleClick = (event) => {
+    const { id } = event.currentTarget;
+    setId(id);
+    setisClicked(true);
+  };
+
+  return (
+    <>
+      {isClicked && <ImageDialog id={id} setisClicked={setisClicked} />}
+      {array.map((item, index) => {
+        return (
+          <Zoom key={index} timeout={400} in={true}>
+            <Grid item xs={12} md={4}>
+              <Paper elevation={3} className={classes.portfolioPaper}>
+                <div className={classes.portfolioWrapper}>
+                  <img
+                    src={`images/item-${item.number}.jpg`}
+                    alt=""
+                    className={classes.portfolioImage}
+                  />
+
+                  <div className={classes.portfolioOverlay} />
+                  <Button
+                    onClick={handleClick}
+                    className={classes.portfolioZoom}
+                    id={item.number}
+                  >
+                    +
+                  </Button>
+                </div>
+                {item.typography && (
+                  <Typography
+                    className={classes.portfolioImageCaption}
+                    variant="body1"
+                  >
+                    {item.typography}
+                  </Typography>
+                )}
+              </Paper>
+            </Grid>
+          </Zoom>
+        );
+      })}
+    </>
+  );
+};
+
+ArrayMap.propTypes = {
   array: PropTypes.array.isRequired,
 };
 
 //Image Dialog
 const ImageDialog = (props) => {
-  const { id, open, setisClicked, setOpen } = props;
+  const { id, setisClicked } = props,
+    [open, setOpen] = useState(true);
 
   //get coordinates of the clicked picture button for transform origin
   const coordinates = document.getElementById(id).getBoundingClientRect(),
@@ -115,9 +132,7 @@ const ImageDialog = (props) => {
 
 ImageDialog.propTypes = {
   id: PropTypes.string.isRequired,
-  open: PropTypes.bool.isRequired,
   setisClicked: PropTypes.func.isRequired,
-  setOpen: PropTypes.func.isRequired,
 };
 
 //Zoom Transition for Image
