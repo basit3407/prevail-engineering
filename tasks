@@ -4,3 +4,5 @@ set animation like meer waice. on load every section is animated when scroll tri
  you can upload ,showcase and make changes later. first convert to react basitminhas.com
 if you feel the change he font and font styles like meerwaice. or change to some other font.it should look beautiful
 proper commenting. it should be uniform
+sending email from contacts page
+set style of contacts section of last 3 grid items being mapped by array.map

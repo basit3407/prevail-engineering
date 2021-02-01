@@ -512,6 +512,22 @@ const useStyles = makeStyles((theme) => ({
   gridContainerGallery: {
     padding: "7%",
   },
+
+  //CONTACT//
+  gridContainerContact: {
+    padding: "7% 3%",
+  },
+  headingContact: {
+    fontWeight: 600,
+    fontSize: "1.5rem",
+    padding: "10% 0 3%",
+  },
+
+  paperContact: {
+    backgroundColor: "#F7F7F7",
+    textAlign: "center",
+    padding: "10%",
+  },
 }));
 
 export default useStyles;
