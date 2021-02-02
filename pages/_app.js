@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import { CssBaseline } from "@material-ui/core";
+import NavBar from "../components/layout/NavBar";
+import Footer from "../components/layout/bottom/Footer";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -19,8 +21,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="favicon.ico" />
       </Head>
       <CssBaseline />
-
+      <NavBar />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
