@@ -11,9 +11,8 @@ import {
   Typography,
   Zoom,
 } from "@material-ui/core";
-import { useState } from "react";
+// import { useState } from "react";
 import useStyles from "../../styles/materialUI/useStyles";
-import { useRouter } from "next/router";
 
 export default function Middle() {
   const array = [
@@ -50,26 +49,17 @@ export default function Middle() {
       },
     ],
     classes = useStyles(),
-    router = useRouter(),
-    [data, SetData] = useState({
-      subject: "",
-      message: "",
-    }),
     handleClick = () => {
-      window.open(
-        `${`mailto:basit3407@gmail.com`}?subject=${data.subject}${`&body=`}${
-          data.message
-        }`
-      );
-      router.push("/thanks");
-    },
-    handleChange = (e) => {
-      const { name, value } = e.target;
+      const subject = document.getElementById("subject"),
+        body = document.getElementById("message");
 
-      SetData((prevVal) => {
-        return { ...prevVal, [name]: value };
-      });
+      window.open(
+        `mailto:basit3407@gmail.com?subject=${subject.value}&body=${body.value}`
+      );
+      subject.value = subject.defaultValue;
+      body.value = body.defaultValue;
     };
+
   return (
     <>
       <Card>
@@ -91,21 +81,19 @@ export default function Middle() {
                   variant="outlined"
                   placeholder="Subject"
                   margin="normal"
-                  name="subject"
-                  value={data.subject}
+                  id="subject"
+                  defaultValue=""
                   fullWidth
-                  onChange={handleChange}
                 />
                 <TextField
                   variant="outlined"
                   placeholder="Message"
                   margin="normal"
-                  rows="5"
-                  name="message"
+                  rows="7"
+                  id="message"
                   multiline
-                  value={data.message}
+                  defaultValue=""
                   fullWidth
-                  onChange={handleChange}
                 />
                 <Button
                   className={classes.buttonContact}
