@@ -4,23 +4,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { values } from "../Home/Values";
 import { faKeyboard, faNewspaper } from "@fortawesome/free-regular-svg-icons";
 
-const serviceValues = values.map((value) => {
-  const returnValue = { ...value };
-
-  switch (returnValue.title) {
-    case "Integrity":
-      returnValue.icon = faKeyboard;
-      break;
-    case "Engineering Economics":
-      returnValue.icon = faNewspaper;
-      break;
-  }
-
-  return returnValue;
-});
-
 export default function Values() {
-  const classes = useStyles();
+  const serviceValues = values.map((value) => {
+      const returnValue = { ...value };
+
+      switch (returnValue.title) {
+        case "Integrity":
+          returnValue.icon = faKeyboard;
+          break;
+        case "Engineering Economics":
+          returnValue.icon = faNewspaper;
+          break;
+      }
+
+      return returnValue;
+    }),
+    classes = useStyles();
   return (
     <Card className={classes.valuesServicesCard}>
       <Container>

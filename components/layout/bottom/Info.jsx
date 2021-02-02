@@ -3,9 +3,9 @@ import useStyles from "../../../styles/materialUI/useStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
-const date = new Date().getFullYear();
 export default function Info() {
-  const classes = useStyles();
+  const classes = useStyles(),
+    date = new Date().getFullYear();
   return (
     <Card>
       <Container>

@@ -1,15 +1,15 @@
 import { Card, Container, Grid, Typography, Zoom } from "@material-ui/core";
 import useStyles from "../../styles/materialUI/useStyles";
 
-const listItems = [
-  "• Requirements assessment",
-  "• Preliminary investigations",
-  "• Development of options and comparative analysis",
-  "• Outline designs and cost estimates",
-  "• Evaluation of technical and economic feasibility",
-];
 export default function Feasibility() {
-  const classes = useStyles();
+  const listItems = [
+      "• Requirements assessment",
+      "• Preliminary investigations",
+      "• Development of options and comparative analysis",
+      "• Outline designs and cost estimates",
+      "• Evaluation of technical and economic feasibility",
+    ],
+    classes = useStyles();
   return (
     <Card className={classes.cardFeasibilityServices}>
       <Container>

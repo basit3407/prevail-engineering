@@ -522,11 +522,33 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.5rem",
     padding: "10% 0 3%",
   },
-
+  buttonContact: {
+    backgroundColor: "#0062ae",
+    borderRadius: 0,
+    textTransform: "none",
+    "&:hover": {
+      backgroundColor: "#0062ae",
+    },
+  },
+  contactButtoTypo: {
+    padding: "5% 0",
+  },
   paperContact: {
     backgroundColor: "#F7F7F7",
     textAlign: "center",
     padding: "10%",
+    marginBottom: "10%",
+    width: "100%",
+  },
+  iframe: {
+    paddingTop: "5%",
+    width: "100%",
+  },
+  contactPaperIcon: {
+    margin: "2% 0",
+  },
+  contactPaperTypo: {
+    padding: "1%",
   },
 }));
 

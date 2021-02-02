@@ -12,18 +12,17 @@ import {
 import useStyles from "../../styles/materialUI/useStyles";
 import PropTypes from "prop-types";
 
-const imageArray = [];
-
-for (let index = 1; index < 10; index++) {
-  let object = {};
-  object["number"] = index;
-  object["typography"] = null;
-  imageArray.push(object);
-}
-
 export default function Images() {
   //Assign CSS
-  const classes = useStyles();
+  const classes = useStyles(),
+    imageArray = [];
+
+  for (let index = 1; index < 10; index++) {
+    let object = {};
+    object["number"] = index;
+    object["typography"] = null;
+    imageArray.push(object);
+  }
 
   return (
     <Card>

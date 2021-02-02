@@ -10,22 +10,21 @@ import {
 import Carousel from "react-material-ui-carousel";
 import useStyles from "../../../styles/materialUI/useStyles";
 
-const imageDesc1 = [
-  { number: 1, alt: "Ocean" },
-  { number: 2, alt: "Dolmen" },
-  { number: 3, alt: "Atrium" },
-];
-const imageDesc2 = [
-  { number: 4, alt: "Maple" },
-  { number: 5, alt: "Legends" },
-  { number: 6, alt: "Imtiaz" },
-];
-const imageDesc3 = [{ number: 7, alt: "Ghambat" }];
-
 export default function Slider() {
   const classes = useStyles(),
     theme = useTheme(),
-    matches = useMediaQuery(theme.breakpoints.down("sm"));
+    matches = useMediaQuery(theme.breakpoints.down("sm")),
+    imageDesc1 = [
+      { number: 1, alt: "Ocean" },
+      { number: 2, alt: "Dolmen" },
+      { number: 3, alt: "Atrium" },
+    ],
+    imageDesc2 = [
+      { number: 4, alt: "Maple" },
+      { number: 5, alt: "Legends" },
+      { number: 6, alt: "Imtiaz" },
+    ],
+    imageDesc3 = [{ number: 7, alt: "Ghambat" }];
 
   return (
     <Card className={classes.bottomSliderCard}>

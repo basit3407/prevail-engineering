@@ -1,22 +1,22 @@
 import { Card, Container, Grid, Typography, Zoom } from "@material-ui/core";
 import useStyles from "../../styles/materialUI/useStyles";
 
-const listItems = [
-  "• Single or three phase Electrical Wiring",
-  "• Industrial and process automation",
-  "• Building Management System",
-  "• HVAC workee phase Electrical Wiring",
-  "• Cable laying and termination",
-  "• Plumbing works",
-  "• Fire Alarm System",
-  "• System Integration",
-  "• Generator overhauling and repairing",
-  "• CCTV",
-  "• Access Control System",
-  "• Parking Management System",
-];
 export default function WhatWeOffer() {
-  const classes = useStyles();
+  const listItems = [
+      "• Single or three phase Electrical Wiring",
+      "• Industrial and process automation",
+      "• Building Management System",
+      "• HVAC workee phase Electrical Wiring",
+      "• Cable laying and termination",
+      "• Plumbing works",
+      "• Fire Alarm System",
+      "• System Integration",
+      "• Generator overhauling and repairing",
+      "• CCTV",
+      "• Access Control System",
+      "• Parking Management System",
+    ],
+    classes = useStyles();
   return (
     <Card className={classes.cardWWoServices}>
       <Container>

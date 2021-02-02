@@ -16,22 +16,22 @@ import {
 } from "@material-ui/core";
 
 //Headings to be animated at time intervals
-const items = [
-  { timer: 0, component: "Building Management System" },
-  { timer: 10, component: "Fire Alarm System" },
-  { timer: 20, component: "CCTV" },
-  { timer: 30, component: "Telecommunication System" },
-  { timer: 40, component: "Fire Fighting Systems" },
-  { timer: 50, component: "HVAC Ducting" },
-  { timer: 60, component: "Chilled Water Piping" },
-];
 
 const SliderSection = () => {
   //Assign css
   const classes = useStyles(),
     //using media quiries
     theme = useTheme(),
-    matches = useMediaQuery(theme.breakpoints.down("sm"));
+    matches = useMediaQuery(theme.breakpoints.down("sm")),
+    items = [
+      { timer: 0, component: "Building Management System" },
+      { timer: 10, component: "Fire Alarm System" },
+      { timer: 20, component: "CCTV" },
+      { timer: 30, component: "Telecommunication System" },
+      { timer: 40, component: "Fire Fighting Systems" },
+      { timer: 50, component: "HVAC Ducting" },
+      { timer: 60, component: "Chilled Water Piping" },
+    ];
 
   return (
     <>

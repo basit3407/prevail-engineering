@@ -5,15 +5,14 @@ import { Card, Container, Grid, Typography, Zoom } from "@material-ui/core";
 import useStyles from "../../styles/materialUI/useStyles";
 import { ArrayMap } from "../Gallery/Images";
 
-const array = [
-  { number: 1, typography: "Dolmen HVAC Works" },
-  { number: 3, typography: "Atrium Mall AHU Controlling" },
-  { number: 9, typography: "Atrium Mall AHU Controlling" },
-];
-
 export default function PortfolioSection() {
   //Assign CSS
-  const classes = useStyles();
+  const classes = useStyles(),
+    array = [
+      { number: 1, typography: "Dolmen HVAC Works" },
+      { number: 3, typography: "Atrium Mall AHU Controlling" },
+      { number: 9, typography: "Atrium Mall AHU Controlling" },
+    ];
 
   //RENDER//
   return (
