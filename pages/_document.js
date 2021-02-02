@@ -7,8 +7,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* font awesome */}
-          <script src="https://use.fontawesome.com/6d80505c93.js"></script>
           {/* Google fonts */}
           <link
             rel="stylesheet"
