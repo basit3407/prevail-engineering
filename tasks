@@ -1,8 +1,3 @@
-remove happy clients from pages where meer waice has removed
-set animation like meer waice. on load every section is animated when scroll trigger reaches it.
- home gallery  doesnt have arrows on it like meer waice has.
- you can upload ,showcase and make changes later. first convert to react basitminhas.com
-if you feel the change he font and font styles like meerwaice. or change to some other font.it should look beautiful
-proper commenting. it should be uniform
-sending email from contacts page
-set style of contacts section of last 3 grid items being mapped by array.map
+make basitminhas responsive
+solve build issues of prevailengineering.read article in stackoverflow
+give add on fiverr and everywhere customize profile.
