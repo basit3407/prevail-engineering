@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 //Load css
-import useStyles from "../../styles/materialUI/useStyles";
+import useStyles from "../../styles/materialUI/MuiuseStyles";
 //Load propTypes
 import PropTypes from "prop-types";
 //Load material ui components

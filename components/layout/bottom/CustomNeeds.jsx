@@ -6,7 +6,7 @@ import {
   Typography,
   Zoom,
 } from "@material-ui/core";
-import useStyles from "../../../styles/materialUI/useStyles";
+import useStyles from "../../../styles/materialUI/MuiuseStyles";
 
 export default function CustomNeeds() {
   const classes = useStyles();

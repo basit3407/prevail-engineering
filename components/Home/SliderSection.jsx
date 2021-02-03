@@ -1,5 +1,5 @@
 //Load css
-import useStyles from "../../styles/materialUI/useStyles";
+import useStyles from "../../styles/materialUI/MuiuseStyles";
 //Load headings animation
 import Animation from "./Animation";
 //Load material ui components
@@ -36,7 +36,6 @@ const SliderSection = () => {
   return (
     <>
       <CardMedia image="images/slider.jpg" className={classes.media}>
-        <Backdrop className={classes.backdrop} open={true} />
         <Grid
           container
           className={classes.containerGrid}
@@ -99,6 +98,7 @@ const SliderSection = () => {
             </Box>
           </Grid>
         </Grid>
+        <Backdrop className={classes.backdrop} open={true} />
       </CardMedia>
     </>
   );

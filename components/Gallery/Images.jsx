@@ -9,7 +9,7 @@ import {
   Dialog,
   Typography,
 } from "@material-ui/core";
-import useStyles from "../../styles/materialUI/useStyles";
+import useStyles from "../../styles/materialUI/MuiuseStyles";
 import PropTypes from "prop-types";
 
 export default function Images() {

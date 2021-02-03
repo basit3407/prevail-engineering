@@ -12,7 +12,7 @@ import {
   Zoom,
 } from "@material-ui/core";
 // import { useState } from "react";
-import useStyles from "../../styles/materialUI/useStyles";
+import useStyles from "../../styles/materialUI/MuiuseStyles";
 
 export default function Middle() {
   const array = [

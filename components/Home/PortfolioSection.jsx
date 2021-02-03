@@ -2,7 +2,7 @@
 import { Card, Container, Grid, Typography, Zoom } from "@material-ui/core";
 
 //Load CSS
-import useStyles from "../../styles/materialUI/useStyles";
+import useStyles from "../../styles/materialUI/MuiuseStyles";
 import { ArrayMap } from "../Gallery/Images";
 
 export default function PortfolioSection() {

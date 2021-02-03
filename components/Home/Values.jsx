@@ -1,7 +1,7 @@
 //Load MaterialUI Components
 import { Card, Container, Grid, Zoom, Typography } from "@material-ui/core";
 //Load css
-import useStyles from "../../styles/materialUI/useStyles";
+import useStyles from "../../styles/materialUI/MuiuseStyles";
 //load fontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlask } from "@fortawesome/free-solid-svg-icons";

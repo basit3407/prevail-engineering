@@ -1,5 +1,5 @@
 import { Card, Container, Grid, Typography, Link } from "@material-ui/core";
-import useStyles from "../../../styles/materialUI/useStyles";
+import useStyles from "../../../styles/materialUI/MuiuseStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 

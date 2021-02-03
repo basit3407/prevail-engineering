@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }) {
         <title>Prevail Engineering</title>
         <link rel="icon" href="favicon.ico" />
       </Head>
+
       <CssBaseline />
       <NavBar />
       <Component {...pageProps} />

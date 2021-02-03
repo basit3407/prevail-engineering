@@ -8,7 +8,7 @@ import {
   useTheme,
 } from "@material-ui/core";
 import Carousel from "react-material-ui-carousel";
-import useStyles from "../../../styles/materialUI/useStyles";
+import useStyles from "../../../styles/materialUI/MuiuseStyles";
 
 export default function Slider() {
   const classes = useStyles(),

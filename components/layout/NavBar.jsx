@@ -16,7 +16,7 @@ import {
   Container,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import useStyles from "../../styles/materialUI/useStyles";
+import useStyles from "../../styles/materialUI/MuiuseStyles";
 
 export default function NavBar(props) {
   const classes = useStyles();

@@ -1,5 +1,5 @@
 import { Card, Container, Grid, Typography, Zoom } from "@material-ui/core";
-import useStyles from "../../styles/materialUI/useStyles";
+import useStyles from "../../styles/materialUI/MuiuseStyles";
 
 export default function Feasibility() {
   const listItems = [

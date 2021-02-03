@@ -10,7 +10,7 @@ import {
   Zoom,
 } from "@material-ui/core";
 //Load css
-import useStyles from "../../styles/materialUI/useStyles";
+import useStyles from "../../styles/materialUI/MuiuseStyles";
 
 export default function AboutSection() {
   //Asign css
