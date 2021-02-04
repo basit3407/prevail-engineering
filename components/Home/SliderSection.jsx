@@ -74,7 +74,7 @@ const SliderSection = () => {
                 variant={matches ? "body1" : "h2"}
               >
                 Dynamic and fast growing contracting company <br /> with a
-                strong focus on delivering excellentce <br /> in services and
+                strong focus on delivering excellence <br /> in services and
                 support to our valued clients
               </Typography>
             </Grid>
