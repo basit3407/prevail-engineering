@@ -1,5 +1,5 @@
 //Load MaterialUI Components
-import { Card, Container, Grid, Typography, Zoom } from "@material-ui/core";
+import { Card, Container, Grid, Typography } from "@material-ui/core";
 
 //Load CSS
 import useStyles from "../../styles/materialUI/MuiuseStyles";
@@ -19,16 +19,15 @@ export default function PortfolioSection() {
     <Card className={classes.portfolioCard}>
       <Container>
         <Grid container className={classes.portfolioGrid} spacing={3}>
-          <Zoom in={true} timeout={400}>
-            <Grid className={classes.globalGridItem} item xs={12}>
-              <Typography className={classes.portfolioHeading} variant="h1">
-                GALLERY
-              </Typography>
-              <Typography variant="body1">
-                Our work samples and portfolios
-              </Typography>
-            </Grid>
-          </Zoom>
+          <Grid className={classes.globalGridItem} item xs={12}>
+            <Typography className={classes.portfolioHeading} variant="h1">
+              GALLERY
+            </Typography>
+            <Typography variant="body1">
+              Our work samples and portfolios
+            </Typography>
+          </Grid>
+
           <ArrayMap array={array} />
         </Grid>
       </Container>
