@@ -6,7 +6,7 @@ import {
   faWrench,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container, Card, Grid, Typography, Zoom } from "@material-ui/core";
+import { Container, Card, Grid, Typography } from "@material-ui/core";
 import useStyles from "../../styles/materialUI/MuiuseStyles";
 
 export default function CoreSpecilizations() {
@@ -65,37 +65,40 @@ export default function CoreSpecilizations() {
     <Card className={classes.cardCSServices}>
       <Container className={classes.containerCSServices}>
         <Grid container className={classes.gridContainerCSServices}>
-          <Zoom in={true} timeout={400}>
-            <Grid item xs={12} className={classes.gridItemCSServices}>
-              <Typography variant="h2" className={classes.headingCSServices}>
-                CORE SPECIALIZATIONS
-              </Typography>
-              <Typography className={classes.paraCSServices}>
-                Mechanical, Electrical & Plumbing Works
-              </Typography>
-            </Grid>
-          </Zoom>
+          <Grid item xs={12} className={classes.gridItemCSServices}>
+            <Typography variant="h2" className={classes.headingCSServices}>
+              CORE SPECIALIZATIONS
+            </Typography>
+            <Typography className={classes.paraCSServices}>
+              Mechanical, Electrical & Plumbing Works
+            </Typography>
+          </Grid>
+
           {services.map((service, index) => {
             return (
-              <Zoom key={index} in={true} timeout={400}>
-                <Grid xs={12} md className={classes.gridItemCSServices} item>
-                  <FontAwesomeIcon
-                    icon={service.icon}
-                    spin
-                    size="2x"
-                    color="#0062ae"
-                    fixedWidth
-                  ></FontAwesomeIcon>
-                  <Typography className={classes.listHeadingCSServices}>
-                    {service.trade}
-                  </Typography>
-                  <ul className={classes.listCSServices}>
-                    {service.expertise.map((experty, index) => {
-                      return <li key={index}>{experty}</li>;
-                    })}
-                  </ul>
-                </Grid>
-              </Zoom>
+              <Grid
+                key={index}
+                xs={12}
+                md
+                className={classes.gridItemCSServices}
+                item
+              >
+                <FontAwesomeIcon
+                  icon={service.icon}
+                  spin
+                  size="2x"
+                  color="#0062ae"
+                  fixedWidth
+                ></FontAwesomeIcon>
+                <Typography className={classes.listHeadingCSServices}>
+                  {service.trade}
+                </Typography>
+                <ul className={classes.listCSServices}>
+                  {service.expertise.map((experty, index) => {
+                    return <li key={index}>{experty}</li>;
+                  })}
+                </ul>
+              </Grid>
             );
           })}
         </Grid>
