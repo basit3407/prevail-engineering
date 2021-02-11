@@ -52,36 +52,34 @@ export const ArrayMap = (props) => {
       {isClicked && <ImageDialog id={id} setisClicked={setisClicked} />}
       {array.map((item, index) => {
         return (
-          <Zoom key={index} timeout={400} in={true}>
-            <Grid item xs={12} md={4}>
-              <Paper elevation={3} className={classes.portfolioPaper}>
-                <div className={classes.portfolioWrapper}>
-                  <img
-                    src={`images/item-${item.number}.jpg`}
-                    alt=""
-                    className={classes.portfolioImage}
-                  />
+          <Grid key={index} item xs={12} md={4}>
+            <Paper elevation={3} className={classes.portfolioPaper}>
+              <div className={classes.portfolioWrapper}>
+                <img
+                  src={`images/item-${item.number}.jpg`}
+                  alt=""
+                  className={classes.portfolioImage}
+                />
 
-                  <div className={classes.portfolioOverlay} />
-                  <Button
-                    onClick={handleClick}
-                    className={classes.portfolioZoom}
-                    id={item.number}
-                  >
-                    +
-                  </Button>
-                </div>
-                {item.typography && (
-                  <Typography
-                    className={classes.portfolioImageCaption}
-                    variant="body1"
-                  >
-                    {item.typography}
-                  </Typography>
-                )}
-              </Paper>
-            </Grid>
-          </Zoom>
+                <div className={classes.portfolioOverlay} />
+                <Button
+                  onClick={handleClick}
+                  className={classes.portfolioZoom}
+                  id={item.number}
+                >
+                  +
+                </Button>
+              </div>
+              {item.typography && (
+                <Typography
+                  className={classes.portfolioImageCaption}
+                  variant="body1"
+                >
+                  {item.typography}
+                </Typography>
+              )}
+            </Paper>
+          </Grid>
         );
       })}
     </>

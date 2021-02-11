@@ -12,7 +12,7 @@ import {
   useTheme,
   Button,
   Box,
-  Zoom,
+  Fade,
 } from "@material-ui/core";
 
 //Headings to be animated at time intervals
@@ -42,7 +42,7 @@ const SliderSection = () => {
           alignContent="center"
           justify="center"
         >
-          <Zoom in={true} mountOnEnter timeout={400}>
+          <Fade in timeout={1500}>
             <Grid item xs={12} className={classes.globalGridItem}>
               <Typography
                 className={classes.sliderTypography}
@@ -52,8 +52,8 @@ const SliderSection = () => {
                 PREVAIL ENGINEERING
               </Typography>
             </Grid>
-          </Zoom>
-          <Zoom in={true} mountOnEnter timeout={400}>
+          </Fade>
+          <Fade in timeout={400}>
             <Grid item xs={12} className={classes.globalGridItem}>
               {items.map((item, index) => {
                 return (
@@ -65,8 +65,8 @@ const SliderSection = () => {
                 );
               })}
             </Grid>
-          </Zoom>
-          <Zoom mountOnEnter in={true} timeout={400}>
+          </Fade>
+          <Fade in timeout={600}>
             <Grid item xs={12}>
               <Typography
                 noWrap={true}
@@ -78,10 +78,10 @@ const SliderSection = () => {
                 support to our valued clients
               </Typography>
             </Grid>
-          </Zoom>
-          <Grid item xs={12} container justify="center">
-            <Box py="30px">
-              <Zoom mountOnEnter in={true} timeout={400}>
+          </Fade>
+          <Fade in timeout={800}>
+            <Grid item xs={12} container justify="center">
+              <Box py="30px">
                 <Button
                   name="button"
                   href="/services"
@@ -94,9 +94,9 @@ const SliderSection = () => {
                     SERVICES WE OFFER
                   </Typography>
                 </Button>
-              </Zoom>
-            </Box>
-          </Grid>
+              </Box>
+            </Grid>
+          </Fade>
         </Grid>
         <Backdrop className={classes.backdrop} open={true} />
       </CardMedia>

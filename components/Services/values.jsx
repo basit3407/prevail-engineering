@@ -1,4 +1,4 @@
-import { Card, Container, Grid, Zoom, Typography } from "@material-ui/core";
+import { Card, Container, Grid, Typography } from "@material-ui/core";
 import useStyles from "../../styles/materialUI/MuiuseStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { values } from "../Home/Values";
@@ -24,33 +24,32 @@ export default function Values() {
     <Card className={classes.valuesServicesCard}>
       <Container>
         <Grid container className={classes.portfolioGrid} spacing={3}>
-          <Zoom in={true} timeout={400}>
-            <Grid item className={classes.globalGridItem} xs={12}>
-              <Typography className={classes.portfolioHeading} variant="h1">
-                VALUE & SERVICES
-              </Typography>
-              <Typography variant="body1">
-                Our Beliefs and Services we provide to our clients
-              </Typography>
-            </Grid>
-          </Zoom>
+          <Grid item className={classes.globalGridItem} xs={12}>
+            <Typography className={classes.portfolioHeading} variant="h1">
+              VALUE & SERVICES
+            </Typography>
+            <Typography variant="body1">
+              Our Beliefs and Services we provide to our clients
+            </Typography>
+          </Grid>
+
           {serviceValues.map((value, index) => {
             return (
-              <Zoom key={index} in={true} timeout={400}>
-                <Grid item className={classes.globalGridItem} xs={12} md={4}>
-                  <FontAwesomeIcon
-                    color="#0062ae"
-                    size="3x"
-                    icon={value.icon}
-                  />
-                  <Typography className={classes.H4ValueServices} variant="h4">
-                    {value.title}
-                  </Typography>
-                  <Typography className={classes.aboutParagraph}>
-                    {value.para}
-                  </Typography>
-                </Grid>
-              </Zoom>
+              <Grid
+                key={index}
+                item
+                className={classes.globalGridItem}
+                xs={12}
+                md={4}
+              >
+                <FontAwesomeIcon color="#0062ae" size="3x" icon={value.icon} />
+                <Typography className={classes.H4ValueServices} variant="h4">
+                  {value.title}
+                </Typography>
+                <Typography className={classes.aboutParagraph}>
+                  {value.para}
+                </Typography>
+              </Grid>
             );
           })}
         </Grid>

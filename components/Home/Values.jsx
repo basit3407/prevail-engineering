@@ -1,5 +1,5 @@
 //Load MaterialUI Components
-import { Card, Container, Grid, Zoom, Typography } from "@material-ui/core";
+import { Card, Container, Grid, Typography } from "@material-ui/core";
 //Load css
 import useStyles from "../../styles/materialUI/MuiuseStyles";
 //load fontAwesome
@@ -35,39 +35,36 @@ export default function Values() {
     <Card className={classes.valuesCard}>
       <Container>
         <Grid container className={classes.portfolioGrid} spacing={7}>
-          <Zoom in={true} timeout={400}>
-            <Grid item className={classes.globalGridItem} xs={12}>
-              <Typography className={classes.portfolioHeading} variant="h1">
-                VALUE & SERVICES
-              </Typography>
-              <Typography variant="body1">
-                Our Beliefs and Services we provide to our clients
-              </Typography>
-            </Grid>
-          </Zoom>
+          <Grid item className={classes.globalGridItem} xs={12}>
+            <Typography className={classes.portfolioHeading} variant="h1">
+              VALUE & SERVICES
+            </Typography>
+            <Typography variant="body1">
+              Our Beliefs and Services we provide to our clients
+            </Typography>
+          </Grid>
+
           {values.map((value, index) => {
             return (
-              <Zoom key={index} in={true} timeout={400}>
-                <Grid container item xs={12} md={4}>
-                  <Grid item xs={4} className={classes.valuesGridItems}>
-                    <div className={classes.valuesIconDiv}>
-                      <FontAwesomeIcon
-                        className={classes.valuesIcon}
-                        size="5x"
-                        icon={value.icon}
-                      />
-                    </div>
-                  </Grid>
-                  <Grid item xs={8}>
-                    <Typography className={classes.valuesH4} variant="h4">
-                      {value.title}
-                    </Typography>
-                    <Typography className={classes.aboutParagraph}>
-                      {value.para}
-                    </Typography>
-                  </Grid>
+              <Grid key={index} container item xs={12} md={4}>
+                <Grid item xs={4} className={classes.valuesGridItems}>
+                  <div className={classes.valuesIconDiv}>
+                    <FontAwesomeIcon
+                      className={classes.valuesIcon}
+                      size="5x"
+                      icon={value.icon}
+                    />
+                  </div>
                 </Grid>
-              </Zoom>
+                <Grid item xs={8}>
+                  <Typography className={classes.valuesH4} variant="h4">
+                    {value.title}
+                  </Typography>
+                  <Typography className={classes.aboutParagraph}>
+                    {value.para}
+                  </Typography>
+                </Grid>
+              </Grid>
             );
           })}
         </Grid>

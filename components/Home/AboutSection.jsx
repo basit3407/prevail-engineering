@@ -7,10 +7,10 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
-  Zoom,
 } from "@material-ui/core";
 //Load css
 import useStyles from "../../styles/materialUI/MuiuseStyles";
+import FadeIn from "../FadeIn";
 
 export default function AboutSection() {
   //Asign css
@@ -24,13 +24,11 @@ export default function AboutSection() {
       <Container>
         <Box pt={matches ? "70px" : "150px"} pl={matches ? 0 : "30px"}>
           <Grid container>
-            <Grid item sm={12} md={6}>
-              <Zoom in={true} timeout={400}>
+            <FadeIn timeout={400}>
+              <Grid item sm={12} md={6}>
                 <Typography variant="h2" className={classes.aboutHeading}>
                   ABOUT US
                 </Typography>
-              </Zoom>
-              <Zoom in={true} timeout={400}>
                 <Typography variant="body1" className={classes.aboutParagraph}>
                   We are a future oriented, dynamic and fast growing contracting
                   company with a strong focus on delivering excellence in
@@ -40,8 +38,6 @@ export default function AboutSection() {
                   areas. We offer a full spectrum of Electrical, Mechanical and
                   Plumbing solutions to virtually all sectors.
                 </Typography>
-              </Zoom>
-              <Zoom in={true} timeout={400}>
                 <Typography variant="body1" className={classes.aboutParagraph}>
                   <strong>PREVAIL ENGINEERING</strong> is an independent
                   business entity, serving a diversified client base, ranging
@@ -49,16 +45,14 @@ export default function AboutSection() {
                   Systems, CCTV, Telecommunication System, Firefighting System
                   and HVAC Ducting and Chilled Water Piping.
                 </Typography>
-              </Zoom>
-            </Grid>
+              </Grid>
+            </FadeIn>
             <Grid item container justify="center" sm={12} md={6}>
-              <Zoom in={true} timeout={400}>
-                <img
-                  className={classes.aboutImage}
-                  src="images/aboutside.jpg"
-                  alt=""
-                />
-              </Zoom>
+              <img
+                className={classes.aboutImage}
+                src="images/aboutside.jpg"
+                alt=""
+              />
             </Grid>
           </Grid>
         </Box>
