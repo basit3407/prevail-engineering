@@ -3,6 +3,7 @@ import { Card, Container, Grid, Typography } from "@material-ui/core";
 
 //Load CSS
 import useStyles from "../../styles/materialUI/MuiuseStyles";
+import FadeIn from "../FadeIn";
 import { ArrayMap } from "../Gallery/Images";
 
 export default function PortfolioSection() {
@@ -19,14 +20,16 @@ export default function PortfolioSection() {
     <Card className={classes.portfolioCard}>
       <Container>
         <Grid container className={classes.portfolioGrid} spacing={3}>
-          <Grid className={classes.globalGridItem} item xs={12}>
-            <Typography className={classes.portfolioHeading} variant="h1">
-              GALLERY
-            </Typography>
-            <Typography variant="body1">
-              Our work samples and portfolios
-            </Typography>
-          </Grid>
+          <FadeIn timeout={1000}>
+            <Grid className={classes.globalGridItem} item xs={12}>
+              <Typography className={classes.portfolioHeading} variant="h1">
+                GALLERY
+              </Typography>
+              <Typography variant="body1">
+                Our work samples and portfolios
+              </Typography>
+            </Grid>
+          </FadeIn>
 
           <ArrayMap array={array} />
         </Grid>
