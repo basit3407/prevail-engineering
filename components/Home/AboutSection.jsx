@@ -7,25 +7,27 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
+  Fade,
 } from "@material-ui/core";
 //Load css
 import useStyles from "../../styles/materialUI/MuiuseStyles";
-import FadeIn from "../FadeIn";
+import { useInView } from "react-intersection-observer";
 
 export default function AboutSection() {
   //Asign css
   const classes = useStyles(),
     //using media queiries
     theme = useTheme(),
-    matches = useMediaQuery(theme.breakpoints.down("sm"));
+    matches = useMediaQuery(theme.breakpoints.down("sm")),
+    [ref, inView] = useInView({ triggerOnce: true });
 
   return (
     <Card className={classes.aboutCard}>
       <Container>
         <Box pt={matches ? "70px" : "150px"} pl={matches ? 0 : "30px"}>
           <Grid container>
-            <FadeIn timeout={400}>
-              <Grid item sm={12} md={6}>
+            <Fade in={inView} timeout={400}>
+              <Grid item ref={ref} sm={12} md={6}>
                 <Typography variant="h2" className={classes.aboutHeading}>
                   ABOUT US
                 </Typography>
@@ -46,14 +48,16 @@ export default function AboutSection() {
                   and HVAC Ducting and Chilled Water Piping.
                 </Typography>
               </Grid>
-            </FadeIn>
-            <Grid item container justify="center" sm={12} md={6}>
-              <img
-                className={classes.aboutImage}
-                src="images/aboutside.jpg"
-                alt=""
-              />
-            </Grid>
+            </Fade>
+            <Fade in={inView} timeout={800}>
+              <Grid item container ref={ref} justify="center" sm={12} md={6}>
+                <img
+                  className={classes.aboutImage}
+                  src="images/aboutside.jpg"
+                  alt=""
+                />
+              </Grid>
+            </Fade>
           </Grid>
         </Box>
       </Container>
