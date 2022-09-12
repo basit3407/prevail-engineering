@@ -13,7 +13,10 @@ export default function Info() {
           <Grid item xs={12} md={6} className={classes.gridItemLeftInfo}>
             <Typography variant="caption">
               Copyright: {date} Design and Devloped by{" "}
-              <Link href="http://basitminhas.com" className={classes.infoLink}>
+              <Link
+                href="https://basit-minhas.vercel.app/"
+                className={classes.infoLink}
+              >
                 <Typography variant="caption">Basit Minhas</Typography>
               </Link>
             </Typography>
